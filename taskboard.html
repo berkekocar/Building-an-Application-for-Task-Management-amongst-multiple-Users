@@ -82,7 +82,9 @@
     </div>
 
   </div>
-
+  {% for tb in taskboard.tb_title %}
+  <p><a href="/task">{{tb}}</a></p>
+  {% endfor %}
 
 </body>
 </html>

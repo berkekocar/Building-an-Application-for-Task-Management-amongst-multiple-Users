@@ -49,7 +49,7 @@ class Tasklist(webapp2.RequestHandler):
         myuser = myuser_key.get()
 
         if button == 'Create':
-            title = self.request.get('tb_title').strip()
+            title = self.request.get('t_title').strip()
             if title not in myuser.task_board:
                 taskboard = Taskboard(id = title, tb_title = title, admin_id = user.user_id(), invite_list=[])
                 taskboard.put()
